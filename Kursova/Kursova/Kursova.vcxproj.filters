@@ -13,15 +13,60 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Файлы исходного кода\Model">
+      <UniqueIdentifier>{199189d4-cc74-4468-8da1-933ab1aaa7c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Заголовочные файлы\Model">
+      <UniqueIdentifier>{fca92df6-a9f4-4094-b66b-256322a76bf0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\View">
+      <UniqueIdentifier>{6f939f9d-21f9-4819-bff2-6407ac229dc2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\Presenter">
+      <UniqueIdentifier>{e74c02a9-3f50-44bc-9aee-744f77dfc6ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Заголовочные файлы\Presenter">
+      <UniqueIdentifier>{980dcee5-ca13-4ba5-9d57-b5fd27c968ab}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Triangle.cpp">
+      <Filter>Файлы исходного кода\Model</Filter>
+    </ClCompile>
     <ClCompile Include="MainForm.cpp">
-      <Filter>Файлы исходного кода</Filter>
+      <Filter>Файлы исходного кода\View</Filter>
+    </ClCompile>
+    <ClCompile Include="Rectangles.cpp">
+      <Filter>Файлы исходного кода\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="DataManager.cpp">
+      <Filter>Файлы исходного кода\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="KursovaPresenter.cpp">
+      <Filter>Файлы исходного кода\Presenter</Filter>
+    </ClCompile>
+    <ClCompile Include="KursovaModel.cpp">
+      <Filter>Файлы исходного кода\Model</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="MainForm.h">
-      <Filter>Файлы исходного кода</Filter>
+    <ClInclude Include="Triangle.h">
+      <Filter>Заголовочные файлы\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="MainForm1.h">
+      <Filter>Файлы исходного кода\View</Filter>
+    </ClInclude>
+    <ClInclude Include="Rectangles.h">
+      <Filter>Заголовочные файлы\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="DataManager.h">
+      <Filter>Заголовочные файлы\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="KursovaModel.h">
+      <Filter>Заголовочные файлы\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="KursovaPresenter.h">
+      <Filter>Заголовочные файлы\Presenter</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

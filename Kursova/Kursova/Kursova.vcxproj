@@ -77,12 +77,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="DataManager.cpp" />
+    <ClCompile Include="KursovaModel.cpp" />
+    <ClCompile Include="KursovaPresenter.cpp" />
     <ClCompile Include="MainForm.cpp" />
+    <ClCompile Include="Rectangles.cpp" />
+    <ClCompile Include="Triangle.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="MainForm.h">
+    <ClInclude Include="DataManager.h" />
+    <ClInclude Include="KursovaModel.h" />
+    <ClInclude Include="KursovaPresenter.h" />
+    <ClInclude Include="MainForm1.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="Rectangles.h" />
+    <ClInclude Include="Triangle.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MainForm1.resx">
+      <DependentUpon>MainForm1.h</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

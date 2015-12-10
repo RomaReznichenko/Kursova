@@ -1,4 +1,4 @@
-#include "MainForm.h"
+#include "MainForm1.h"
 
 using namespace System;
 using namespace System::Windows::Forms;
@@ -11,4 +11,4 @@ void main(array<String^>^ args){
 	Application::SetCompatibleTextRenderingDefault(false);
 	Kursova::MainForm^ form = gcnew Kursova::MainForm();
 	Application::Run(form);
-}
+} 
