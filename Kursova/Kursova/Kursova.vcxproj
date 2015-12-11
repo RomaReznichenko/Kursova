@@ -86,6 +86,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DataManager.h" />
+    <ClInclude Include="ITrianglesRectanglesView.h" />
     <ClInclude Include="KursovaModel.h" />
     <ClInclude Include="KursovaPresenter.h" />
     <ClInclude Include="Rectangles.h" />
