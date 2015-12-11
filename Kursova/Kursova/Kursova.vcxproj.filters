@@ -68,5 +68,13 @@
     <ClInclude Include="KursovaPresenter.h">
       <Filter>Заголовочные файлы\Presenter</Filter>
     </ClInclude>
+    <ClInclude Include="ITrianglesRectanglesView.h">
+      <Filter>Заголовочные файлы\Presenter</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MainForm1.resx">
+      <Filter>Файлы ресурсов</Filter>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>
