@@ -53,9 +53,6 @@
     <ClInclude Include="Triangle.h">
       <Filter>Заголовочные файлы\Model</Filter>
     </ClInclude>
-    <ClInclude Include="MainForm1.h">
-      <Filter>Файлы исходного кода\View</Filter>
-    </ClInclude>
     <ClInclude Include="Rectangles.h">
       <Filter>Заголовочные файлы\Model</Filter>
     </ClInclude>
@@ -71,6 +68,11 @@
     <ClInclude Include="ITrianglesRectanglesView.h">
       <Filter>Заголовочные файлы\Presenter</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MainForm1.resx">
+      <Filter>Файлы ресурсов</Filter>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MainForm1.resx">
