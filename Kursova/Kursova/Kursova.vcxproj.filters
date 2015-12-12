@@ -33,9 +33,6 @@
     <ClCompile Include="Triangle.cpp">
       <Filter>Файлы исходного кода\Model</Filter>
     </ClCompile>
-    <ClCompile Include="MainForm.cpp">
-      <Filter>Файлы исходного кода\View</Filter>
-    </ClCompile>
     <ClCompile Include="Rectangles.cpp">
       <Filter>Файлы исходного кода\Model</Filter>
     </ClCompile>
@@ -47,6 +44,9 @@
     </ClCompile>
     <ClCompile Include="KursovaModel.cpp">
       <Filter>Файлы исходного кода\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="MainForm.cpp">
+      <Filter>Файлы исходного кода\View</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -68,11 +68,9 @@
     <ClInclude Include="ITrianglesRectanglesView.h">
       <Filter>Заголовочные файлы\Presenter</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="MainForm1.resx">
-      <Filter>Файлы ресурсов</Filter>
-    </EmbeddedResource>
+    <ClInclude Include="MainForm.h">
+      <Filter>Файлы исходного кода\View</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MainForm1.resx">

@@ -1,9 +1,9 @@
-#include "MainForm1.h"
+#include "MainForm.h"
+
 #include "KursovaPresenter.h"
 
 using namespace System;
 using namespace System::Windows::Forms;
-// 
 
 [STAThreadAttribute]
 void main(array<String^>^ args){
@@ -15,4 +15,4 @@ void main(array<String^>^ args){
 	kursovaPresenter->SetView(form);
 	form->SetTrianglesRectanglesPresenter(kursovaPresenter);
 	Application::Run(form);
-} 
+}
