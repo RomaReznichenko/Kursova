@@ -28,13 +28,11 @@ void KursovaPresenter::Test()
 {
 	for each (Rectangles^ var in kursovaModel->GetRectangles())
 	{
-		trianglesRectanglesView->ShowRectangles(var, Color::Red, 0);
 		for each (Triangle^ tr in kursovaModel->GetTriangles())
 		{
 			if (var->TriangleInRectangle(tr))
 			{
 				tr->flag = true;
-				trianglesRectanglesView->ShowTriangle(tr, Color::Green);
 			}
 		}	
 	}
@@ -47,15 +45,26 @@ void KursovaPresenter::Show()
 	if (kursovaModel->GetRectangles()->Count == 0) return;
 	Test();
 	//задаємо колір 
-	for each (Rectangles^ var in kursovaModel->GetRectangles())
-	{
 		Color color;
 		for each (Triangle^ tr in kursovaModel->GetTriangles())
 		{
-			//trianglesRectanglesView->Show(tr,var, color);
+			if (tr->flag)
+			{
+				color = Color::Green;
+				trianglesRectanglesView->ShowTriangle(tr, color);
+			}
+				
+			else
+			{
+				color = Color::Blue;
+				trianglesRectanglesView->ShowTriangle(tr, color);
+			}
+				
+			
 		}
-	
-	}
-
-
+		for each (Rectangles^ tr in kursovaModel->GetRectangles())
+		{
+			trianglesRectanglesView->ShowRectangles(tr, Color::Black, 0);
+		}
 }
+

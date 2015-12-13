@@ -34,6 +34,7 @@ namespace Kursova {
 			g->DrawLine(pen, tr->x1, tr->y1, tr->x2, tr->y2);
 			g->DrawLine(pen, tr->x2, tr->y2, tr->x3, tr->y3);
 			g->DrawLine(pen, tr->x1, tr->y1, tr->x3, tr->y3);
+			Console::WriteLine(tr->x1 + " "+  tr->y1 + " " + tr->x3 + " " +  tr->y3);
 		}
 
 		virtual void MainForm::ShowRectangles(Rectangles^ rc,  Color color, int hz) = ITrianglesRectanglesView::ShowRectangles

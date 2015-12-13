@@ -37,13 +37,6 @@ List<Triangle^>^ DataManager::GetTrianglesList(String^ path)
 		}
 	}
 
-	Console::WriteLine("Triangle");
-	for each (Triangle^ var in Triangles)
-	{
-		Console::WriteLine(var->x1 + " " + var->y1 + " " + var->x2 + " " + var->y2 + " " + var->x3 + " " + var->y3);
-	}
-
-	
 	streamReader->Close();
 	return Triangles;
 }
@@ -82,12 +75,6 @@ List<Rectangles^>^ DataManager::GetRectanglesList(String^ path)
 			j = 0;
 			Rectangle->Add(gcnew Rectangles(coordinates[0], coordinates[1], coordinates[2], coordinates[3]));
 		}
-	}
-
-	Console::WriteLine("Rectangles");
-	for each (Rectangles^ var in Rectangle)
-	{
-		Console::WriteLine(var->x1 + " " + var->y1 + " " + var->x2 + " " + var->y2 );
 	}
 
 	streamReader->Close();
