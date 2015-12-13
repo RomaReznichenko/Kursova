@@ -20,6 +20,7 @@ void KursovaPresenter::SetTriangles(String^ path)
 void KursovaPresenter::SetRectangles(String^ path)
 {
 	kursovaModel->SetRectangles(path);
+	Show();
 
 }
 //перевіряє чи належить трикутник прямокутнику

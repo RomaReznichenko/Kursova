@@ -15,26 +15,32 @@ namespace Kursova {
 
 	public ref struct MainForm : public System::Windows::Forms::Form, public ITrianglesRectanglesView
 	{
-	private: KursovaPresenter^ kursovaPresenter;
+	private:
+		KursovaPresenter^ kursovaPresenter;
+		Graphics^ g;
+
 	public:
 		MainForm(void)
 		{
 			InitializeComponent();
-		}
-
-		virtual void SetTrianglesRectanglesPresenter()
-		{
 			this->kursovaPresenter = gcnew KursovaPresenter(this);
+			g = this->CreateGraphics();
 		}
 
 		virtual void MainForm::ShowTriangle(Triangle^ tr, Color color) = ITrianglesRectanglesView::ShowTriangle
 		{
-
+			g = this->CreateGraphics();
+			Pen^ pen = gcnew Pen(color, 2.1);
+			g->DrawLine(pen, tr->x1, tr->y1, tr->x2, tr->y2);
+			g->DrawLine(pen, tr->x2, tr->y2, tr->x3, tr->y3);
+			g->DrawLine(pen, tr->x1, tr->y1, tr->x3, tr->y3);
 		}
 
-		virtual void MainForm::ShowRectangles(Rectangles^ rc,  Color colorm, int hz) = ITrianglesRectanglesView::ShowRectangles
+		virtual void MainForm::ShowRectangles(Rectangles^ rc,  Color color, int hz) = ITrianglesRectanglesView::ShowRectangles
 		{
-
+			g = this->CreateGraphics();
+			Pen^ pen = gcnew Pen(color, 2.1);
+			g->DrawRectangle(pen, rc->x1, rc->y1, rc->x2, rc->y2);
 		}
 
 	protected:
@@ -192,6 +198,8 @@ namespace Kursova {
 				 {
 					 MessageBox::Show("Помилка при відкритті файлу");
 				 }
+
+				 
 	}
 	};
 }
