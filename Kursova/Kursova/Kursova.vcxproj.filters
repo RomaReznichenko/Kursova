@@ -72,9 +72,4 @@
       <Filter>Файлы исходного кода\View</Filter>
     </ClInclude>
   </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="MainForm1.resx">
-      <Filter>Файлы ресурсов</Filter>
-    </EmbeddedResource>
-  </ItemGroup>
 </Project>
