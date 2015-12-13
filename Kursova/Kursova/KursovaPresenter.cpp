@@ -24,15 +24,25 @@ void KursovaPresenter::SetRectangles(String^ path)
 
 }
 //перевіряє чи належить трикутник прямокутнику
-void KursovaPresenter::Test()
+void KursovaPresenter::Search()
 {
 	for each (Rectangles^ var in kursovaModel->GetRectangles())
 	{
 		for each (Triangle^ tr in kursovaModel->GetTriangles())
 		{
-			if (var->TriangleInRectangle(tr))
+			if (!tr->flag && !tr->isObtuse)
 			{
-				tr->flag = true;
+				if (var->TriangleInRectangle(tr))
+				{
+					tr->flag = true;
+				}
+				else
+				{
+					if (var->СrossingFigure(tr)) 
+					{
+						tr->isObtuse = true;
+					}
+				}
 			}
 		}	
 	}
@@ -43,7 +53,7 @@ void KursovaPresenter::Show()
 {
 	if (kursovaModel->GetTriangles()->Count == 0) return;
 	if (kursovaModel->GetRectangles()->Count == 0) return;
-	Test();
+	Search();
 	//задаємо колір 
 		Color color;
 		for each (Triangle^ tr in kursovaModel->GetTriangles())
@@ -53,11 +63,18 @@ void KursovaPresenter::Show()
 				color = Color::Green;
 				trianglesRectanglesView->ShowTriangle(tr, color);
 			}
-				
 			else
 			{
-				color = Color::Blue;
-				trianglesRectanglesView->ShowTriangle(tr, color);
+				if (tr->isObtuse) 
+				{
+					color = Color::Purple;
+					trianglesRectanglesView->ShowTriangle(tr, color);
+				}
+				else
+				{
+					color = Color::Blue;
+					trianglesRectanglesView->ShowTriangle(tr, color);
+				}
 			}
 				
 			

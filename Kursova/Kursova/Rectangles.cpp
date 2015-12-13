@@ -19,3 +19,100 @@ bool Rectangles::TriangleInRectangle(Triangle^ tr)
 		return false;
 	}
 }
+
+bool Rectangles::ÑrossingFigure(Triangle^ tr) 
+{
+	pt pr1, pr2, pt1, pt2;
+
+	pr1.x = x1; pr1.y = y1; pr2.x = x2; pr2.y = y1;
+
+	pt1.x = tr->x1; pt1.y = tr->y1; pt2.x = tr->x2; pt2.y = tr->y2;
+
+	if (intersect(pr1, pr2, pt1, pt2))
+		return true;
+	//
+	pr1.x = x1; pr1.y = y1; pr2.x = x2; pr2.y = y1;
+
+	pt1.x = tr->x2; pt1.y = tr->y2; pt2.x = tr->x3; pt2.y = tr->y3;
+
+	if (intersect(pr1, pr2, pt1, pt2))
+		return true;
+	//
+	pr1.x = x1; pr1.y = y1; pr2.x = x2; pr2.y = y1;
+
+	pt1.x = tr->x1; pt1.y = tr->y1; pt2.x = tr->x3; pt2.y = tr->y3;
+
+	if (intersect(pr1, pr2, pt1, pt2))
+		return true;
+	//
+
+	///////////////////////////////////////
+	pr1.x = x2; pr1.y = y1; pr2.x = x2; pr2.y = y2;
+
+	pt1.x = tr->x1; pt1.y = tr->y1; pt2.x = tr->x2; pt2.y = tr->y2;
+
+	if (intersect(pr1, pr2, pt1, pt2))
+		return true;
+	//
+	pr1.x = x2; pr1.y = y1; pr2.x = x2; pr2.y = y2;
+
+	pt1.x = tr->x2; pt1.y = tr->y2; pt2.x = tr->x3; pt2.y = tr->y3;
+
+	if (intersect(pr1, pr2, pt1, pt2))
+		return true;
+	//
+	pr1.x = x2; pr1.y = y1; pr2.x = x2; pr2.y = y2;
+
+	pt1.x = tr->x1; pt1.y = tr->y1; pt2.x = tr->x3; pt2.y = tr->y3;
+
+	if (intersect(pr1, pr2, pt1, pt2))
+		return true;
+	//
+
+	//////////////////////////////////////////
+	pr1.x = x2; pr1.y = y2; pr2.x = x1; pr2.y = y2;
+
+	pt1.x = tr->x1; pt1.y = tr->y1; pt2.x = tr->x2; pt2.y = tr->y2;
+
+	if (intersect(pr1, pr2, pt1, pt2))
+		return true;
+	//
+	pr1.x = x2; pr1.y = y2; pr2.x = x1; pr2.y = y2;
+
+	pt1.x = tr->x2; pt1.y = tr->y2; pt2.x = tr->x3; pt2.y = tr->y3;
+
+	if (intersect(pr1, pr2, pt1, pt2))
+		return true;
+	//
+	pr1.x = x2; pr1.y = y2; pr2.x = x1; pr2.y = y2;
+
+	pt1.x = tr->x1; pt1.y = tr->y1; pt2.x = tr->x3; pt2.y = tr->y3;
+
+	if (intersect(pr1, pr2, pt1, pt2))
+		return true;
+	//
+
+	/////////////////////////////////////////////
+	pr1.x = x1; pr1.y = y1; pr2.x = x1; pr2.y = y2;
+
+	pt1.x = tr->x1; pt1.y = tr->y1; pt2.x = tr->x2; pt2.y = tr->y2;
+
+	if (intersect(pr1, pr2, pt1, pt2))
+		return true;
+	//
+	pr1.x = x1; pr1.y = y1; pr2.x = x1; pr2.y = y2;
+
+	pt1.x = tr->x2; pt1.y = tr->y2; pt2.x = tr->x3; pt2.y = tr->y3;
+
+	if (intersect(pr1, pr2, pt1, pt2))
+		return true;
+	//
+	pr1.x = x1; pr1.y = y1; pr2.x = x1; pr2.y = y2;
+
+	pt1.x = tr->x1; pt1.y = tr->y1; pt2.x = tr->x3; pt2.y = tr->y3;
+
+	if (intersect(pr1, pr2, pt1, pt2))
+		return true;
+
+	return false;
+}

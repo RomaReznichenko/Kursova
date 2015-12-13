@@ -15,7 +15,7 @@ public:
 	KursovaPresenter(ITrianglesRectanglesView^ view);
 	void SetTriangles(String^ path);
 	void SetRectangles(String^ path);
-	void Test();
+	void Search();
 	void Show();
 	void SetView(ITrianglesRectanglesView^ view);
 };
