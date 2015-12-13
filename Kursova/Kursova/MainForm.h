@@ -19,7 +19,7 @@ namespace Kursova {
 		{
 			InitializeComponent();
 		}
-		// 
+		
 		virtual void SetTrianglesRectanglesPresenter(KursovaPresenter^ kursovaPresenter)
 		{
 			this->kursovaPresenter = kursovaPresenter;

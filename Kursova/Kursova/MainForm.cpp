@@ -1,5 +1,4 @@
 #include "MainForm.h"
-
 #include "KursovaPresenter.h"
 
 using namespace System;
