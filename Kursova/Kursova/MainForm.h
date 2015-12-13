@@ -2,6 +2,8 @@
 #include "DataManager.h"
 #include "KursovaPresenter.h"
 #include "ITrianglesRectanglesView.h"
+
+
 namespace Kursova {
 
 	using namespace System;
@@ -11,7 +13,7 @@ namespace Kursova {
 	using namespace System::Data;
 	using namespace System::Drawing;
 
-	public ref class MainForm : public System::Windows::Forms::Form, public ITrianglesRectanglesView
+	public ref struct MainForm : public System::Windows::Forms::Form, public ITrianglesRectanglesView
 	{
 	private: KursovaPresenter^ kursovaPresenter;
 	public:
@@ -19,18 +21,21 @@ namespace Kursova {
 		{
 			InitializeComponent();
 		}
-		// 
-		virtual void SetTrianglesRectanglesPresenter(KursovaPresenter^ kursovaPresenter)
+
+		virtual void SetTrianglesRectanglesPresenter()
 		{
-			this->kursovaPresenter = kursovaPresenter;
+			this->kursovaPresenter = gcnew KursovaPresenter(this);
 		}
 
-
-		virtual void MainForm::Show(Triangle^ tr, Rectangles^ rec, Color color)
+		virtual void MainForm::ShowTriangle(Triangle^ tr, Color color) = ITrianglesRectanglesView::ShowTriangle
 		{
 
 		}
 
+		virtual void MainForm::ShowRectangles(Rectangles^ rc,  Color colorm, int hz) = ITrianglesRectanglesView::ShowRectangles
+		{
+
+		}
 
 	protected:
 		~MainForm()

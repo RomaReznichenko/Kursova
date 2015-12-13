@@ -12,7 +12,7 @@ private:
 	ITrianglesRectanglesView^ trianglesRectanglesView;
 
 public:
-	KursovaPresenter();
+	KursovaPresenter(ITrianglesRectanglesView^ view);
 	void SetTriangles(String^ path);
 	void SetRectangles(String^ path);
 	void Test();

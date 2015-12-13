@@ -1,8 +1,9 @@
 #include "KursovaPresenter.h"
 
 
-KursovaPresenter::KursovaPresenter()
+KursovaPresenter::KursovaPresenter(ITrianglesRectanglesView^ view)
 {
+	this->trianglesRectanglesView = view;
 	kursovaModel = gcnew KursovaModel();
 }
 void KursovaPresenter::SetView(ITrianglesRectanglesView^ view)
@@ -26,11 +27,13 @@ void KursovaPresenter::Test()
 {
 	for each (Rectangles^ var in kursovaModel->GetRectangles())
 	{
+		trianglesRectanglesView->ShowRectangles(var, Color::Red, 0);
 		for each (Triangle^ tr in kursovaModel->GetTriangles())
 		{
 			if (var->TriangleInRectangle(tr))
 			{
 				tr->flag = true;
+				trianglesRectanglesView->ShowTriangle(tr, Color::Green);
 			}
 		}	
 	}
@@ -48,7 +51,7 @@ void KursovaPresenter::Show()
 		Color color;
 		for each (Triangle^ tr in kursovaModel->GetTriangles())
 		{
-			trianglesRectanglesView->Show(tr,var, color);
+			//trianglesRectanglesView->Show(tr,var, color);
 		}
 	
 	}

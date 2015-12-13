@@ -1,5 +1,6 @@
 #pragma once
 #include "Triangle.h"
+
 ref class Rectangles
 {
 public:
